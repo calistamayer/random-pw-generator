@@ -19,6 +19,11 @@ var collectCriteria = function() {
   var uppercase = window.confirm('Should your password include uppercase characters?');
   var numeric = window.confirm ('Should your password include numeric characters?');
   var special = window.confirm ('Should your password include special characters?');
+
+  // must submit one character type
+  if (lowercase === false && uppercase === false && numeric === false && special === false) {
+    window.alert('Please include at least one character type.');
+  }
 }
 
 collectCriteria();
