@@ -1,6 +1,6 @@
 // Assignment code here
 
-// presents length prompt
+// prompt for password length
 var length = function() {
   var promptLength = window.prompt('How many characters long will your password be? Enter a value between 8 and 128.');
   if (promptLength < 8 || promptlength > 128) {
@@ -8,8 +8,16 @@ var length = function() {
   }
 }
 
-length();
+var collectCriteria = function() {
+  length();
+  // prompts for character types
+  var lowercase = window.confirm('Should your password include lowercase characters?');
+  var uppercase = window.confirm('Should your password include uppercase characters?');
+  var numeric = window.confirm ('Should your password include numeric characters?');
+  var special = window.confirm ('Should your password include special characters?');
+}
 
+collectCriteria();
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
