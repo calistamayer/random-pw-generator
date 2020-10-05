@@ -23,7 +23,11 @@ var collectCriteria = function() {
 
 collectCriteria();
 
-var password = window.alert('Your password is ');
+var displayPassword = function() {
+  window.alert('Your password is ');
+}
+
+displayPassword();
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
